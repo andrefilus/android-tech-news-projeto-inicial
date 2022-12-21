@@ -11,6 +11,9 @@ class FormularioViewModel(
 ) : ViewModel(){
 
     fun salva(noticia: Noticia) : LiveData<Resource<Void?>> {
-        return repository.salva(noticia)
+        return if(noticia.id > 0)
+            repository.edita(noticia)
+        else
+            repository.salva(noticia)
     }
 }
