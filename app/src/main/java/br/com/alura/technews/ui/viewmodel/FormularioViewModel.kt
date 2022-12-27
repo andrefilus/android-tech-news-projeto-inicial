@@ -16,4 +16,6 @@ class FormularioViewModel(
         else
             repository.salva(noticia)
     }
+
+    fun buscaPorId(noticiaId: Long) = repository.buscaPorId(noticiaId)
 }
