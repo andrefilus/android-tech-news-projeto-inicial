@@ -43,11 +43,12 @@ class VisualizaNoticiaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_visualiza_noticia)
         title = TITULO_APPBAR
         verificaIdDaNoticia()
+        buscaNoticiaSelecionada()
     }
 
     override fun onResume() {
         super.onResume()
-        buscaNoticiaSelecionada()
+//        buscaNoticiaSelecionada()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
